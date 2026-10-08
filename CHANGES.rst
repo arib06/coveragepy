@@ -23,6 +23,8 @@ upgrading your version of coverage.py.
 Unreleased
 ----------
 
+- Dropped support for Python 3.10.
+
 - Fix: a comment or string that merely mentioned ``if True:`` or
   ``while True:`` could mark its line as a branch that is known to be partial,
   so a branch that never ran was reported as taken.  These built-in patterns
@@ -37,6 +39,13 @@ Unreleased
   report, the text and Markdown summary reports, and ``coverage debug data``
   replace non-printable characters in names. Printable names are unchanged.
 
+- Fix: a file pattern (from ``include``, ``omit``, or a ``[paths]`` alias)
+  containing a newline sent the glob-to-regex translation into an infinite
+  loop, hanging the process.  Newlines in patterns are now handled like any
+  other character.
+
+- Binary wheels are now provided for iOS and Android. This allows the use of
+  the optimized C tracer on mobile platforms.
 
 .. start-releases
 
