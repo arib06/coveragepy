@@ -33,9 +33,9 @@ Unreleased
 - Fix: file names (and plugin names) can contain control characters, which are
   legal in POSIX paths but unsafe in reports: in XML 1.0 they make the document
   non-well-formed, and in a terminal they act as escape sequences (colors,
-  title/clipboard sequences, cursor moves that forge output).  The XML report,
-  the text and Markdown summary reports, and ``coverage debug data`` now replace
-  non-printable characters in names.  Printable names are unchanged.
+  title/clipboard sequences, cursor moves that forge output). Now the XML
+  report, the text and Markdown summary reports, and ``coverage debug data``
+  replace non-printable characters in names. Printable names are unchanged.
 
 
 .. start-releases
